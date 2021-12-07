@@ -24,6 +24,8 @@ extern class OS {
 	public static function cancelAlarm(id:Int):Void;
 	public static function shutdown():Void;
 	public static function reboot():Void;
+	public static function date(?format:String,?time:Int):Dynamic;
+	public static function epoch(?args:String):Int;
 
 	@:native("pullEvent") private static function _pullEvent(?type:String):Dynamic;
 	@:native("pullEventRaw") private static function _pullEventRaw(?type:String):Dynamic;
